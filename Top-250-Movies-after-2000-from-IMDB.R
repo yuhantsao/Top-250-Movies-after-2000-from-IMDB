@@ -9,18 +9,18 @@ movie_names_css <- ".titleColumn a"
 star_css <- "#main strong"
 
 html<- read_html(movie.url)   
-release_time<- html_nodes(html,css = release_time_css )      #上映時間                    
+release_time<- html_nodes(html,css = release_time_css )                          
 release_time <- html_text(release_time)
 release_time <- substr(release_time,start=2,stop = 5)
 release_time
 
 html<- read_html(movie.url)     
-movie_names<- html_nodes(html,css = movie_names_css )         #電影名稱               <- 
+movie_names<- html_nodes(html,css = movie_names_css)
 movie_names<- html_text(movie_names)
 movie_names
 
 html<- read_html(movie.url)     
-star<- html_nodes(html,css = star_css )                      #評分  
+star<- html_nodes(html,css = star_css )                       
 star <- html_text(star)
 star
 
